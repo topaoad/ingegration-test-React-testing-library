@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import '@testing-library/jest-dom/extend-expect'
 import { render, screen, cleanup } from '@testing-library/react'
 import { SWRConfig } from 'swr'
@@ -5,6 +8,7 @@ import { rest } from 'msw'
 import { setupServer } from 'msw/node'
 import TaskPage from '../pages/task-page'
 import { TASK } from '../types/Types'
+import 'setimmediate'
 
 const server = setupServer(
   rest.get('https://jsonplaceholder.typicode.com/todos/', (req, res, ctx) => {

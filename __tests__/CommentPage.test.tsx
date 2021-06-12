@@ -1,9 +1,13 @@
+/**
+ * @jest-environment jsdom
+ */
 import { render, screen, cleanup } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 import { SWRConfig } from 'swr'
 import { rest } from 'msw'
 import { setupServer } from 'msw/node'
 import CommentPage from '../pages/comment-page'
+import 'setimmediate'
 
 const server = setupServer(
   rest.get(

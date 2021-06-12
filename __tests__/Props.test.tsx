@@ -1,7 +1,11 @@
+/**
+ * @jest-environment jsdom
+ */
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 import Post from '../components/Post'
 import { POST } from '../types/Types'
+import 'setimmediate'
 
 describe('Post component with given props', () => {
   let dummyProps: POST
