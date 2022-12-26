@@ -54,7 +54,7 @@ https://nextjs.org/learn/excel/typescript/create-tsconfig
 ### 3-1. 空のtsconfig.json作成
     touch tsconfig.json
 ### 3-2. 必要moduleのインストール
-    npm i -D typescript @types/react@17.0.41 @types/node
+    npm i -D typescript @types/react@17.0.41 @types/node@14.14.41
 ### 3-3. 開発server起動
     npm run dev
 ### 3-4. _app.js, index.js -> tsx へ拡張子変更
