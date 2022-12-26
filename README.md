@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## 1. Nextjs Project 新規作成
 ### 1-1.  create-next-app
-    npx create-next-app . --use-npm
+    npx create-next-app@11.1.2 . --use-npm
 #### Node.js version 10.13以降が必要です。 -> ターミナル `node -v`でver確認出来ます。
 ### 1-2.  必要 module のインストール
     npm i axios@0.21.1 msw@0.35.0 swr
