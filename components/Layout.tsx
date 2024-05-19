@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 interface TITLE {
   title: string
+  children: React.ReactNode
 }
 const Layout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
   return (
@@ -15,46 +16,28 @@ const Layout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
         <nav className="bg-gray-800 w-screen">
           <div className="flex items-center pl-8 h-14">
             <div className="flex space-x-4">
-              <Link href="/">
-                <a
-                  data-testid="home-nav"
-                  className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
-                >
-                  Home
-                </a>
+              <Link href="/" passHref>
+                <a data-testid="home-nav">Home</a>
               </Link>
-              <Link href="/blog-page">
-                <a
-                  data-testid="blog-nav"
-                  className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
-                >
-                  Blog
-                </a>
+              {/* <Link href="/" data-testid="home-nav"
+                className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
+                Home
+              </Link> */}
+              {/* <Link href="/blog-page" data-testid="blog-nav"
+                className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
+                Blog
               </Link>
-              <Link href="/comment-page">
-                <a
-                  data-testid="comment-nav"
-                  className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
-                >
-                  Comment
-                </a>
+              <Link href="/comment-page" data-testid="comment-nav"
+                className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
+                Comment
               </Link>
-              <Link href="/context-page">
-                <a
-                  data-testid="context-nav"
-                  className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
-                >
-                  Context
-                </a>
+              <Link data-testid="context-nav" href="/context-page" className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
+                Context
               </Link>
-              <Link href="/task-page">
-                <a
-                  data-testid="task-nav"
-                  className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
-                >
-                  Todos
-                </a>
-              </Link>
+              <Link href="/task-page" data-testid="task-nav"
+                className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
+                Todos
+              </Link> */}
             </div>
           </div>
         </nav>

@@ -39,6 +39,7 @@ export default PostDetail
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = await getAllPostIds()
+  console.log("paths", paths)
   return {
     paths,
     fallback: false,
@@ -46,6 +47,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
+  console.log("ctx", ctx)
   //const { post: post } = await getPostData(ctx.params.id as string)
   const post = await getPostData(ctx.params.id as string)
   return {

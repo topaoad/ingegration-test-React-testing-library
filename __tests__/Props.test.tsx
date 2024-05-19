@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import { render, screen } from '@testing-library/react'
-import '@testing-library/jest-dom/extend-expect'
+import '@testing-library/jest-dom';
 import Post from '../components/Post'
 import { POST } from '../types/Types'
 import 'setimmediate'

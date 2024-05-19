@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import { render, screen, cleanup } from '@testing-library/react'
-import '@testing-library/jest-dom/extend-expect'
+import '@testing-library/jest-dom';
 import { SWRConfig } from 'swr'
 import { rest } from 'msw'
 import { setupServer } from 'msw/node'
